@@ -1,0 +1,117 @@
+<div class="modal-dialog">
+    <div class="modal-content border-0">
+        <div class="modal-header border-0">
+            <h5 class="modal-title" id="exampleModalLabel">Edit Job Experience</h5>
+            <button (click)="activeModal.dismiss('Cross click')" type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+            <form class="form-group" [formGroup]="educationModel.formGroupAddEducation">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">School/University</label>
+                            <select formControlName="schoolUniversity" id="Select" class="form-select">
+                                <option value="unsurya">unsurya</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="select" class="form-label">Degree</label>
+                            <select formControlName="degreeName" id="Select" class="form-select">
+                                <option value="S1">S1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="select" class="form-label">Major</label>
+                            <select formControlName="majorName" id="Select" class="form-select">
+                                <option value="si">si</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="select" class="form-label">Graduation Year</label>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="select" class="form-label">Start date</label>
+                            <select formControlName="startPeriodMonth" id="Select" class="form-select">
+                                <option value="" selected disabled>Month</option>
+                                <option value="oktober">oktober</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="select" class="form-label" style="visibility: hidden;">select menu</label>
+                            <select formControlName="startPeriodYear" id="Select" class="form-select">
+                                <option value="" selected disabled>Year</option>
+                                <option value="2022">2022</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="select" class="form-label">End date/Expected</label>
+                            <select formControlName="endPeriodMonth" id="Select" class="form-select">
+                                <option value="" selected disabled>Month</option>
+                                <option value="november">november</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="select" class="form-label" style="visibility: hidden;">select menu</label>
+                            <select formControlName="endPeriodYear" id="Select" class="form-select">
+                                <option value="" selected disabled>Year</option>
+                                <option value="2023">2023</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="select" class="form-label">Grade Point</label>
+                            <select formControlName="gradePoint" id="Select" class="form-select">
+                                <option value="" selected disabled>Month</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="select" class="form-label" style="visibility: hidden;">select menu</label>
+                            <select formControlName="gradePointMax" id="Select" class="form-select">
+                                <option value="" selected disabled>Year</option>
+                                <option value="20">20</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="form-label">Achievements, Activities/Societies, or Descriptions
+                            <i class="text-secondary">(Optional)</i></label>
+                        <input formControlName="educationDescription" type="text" class="form-control text-position1">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer border-0">
+            <button (click)="activeModal.dismiss('Cross click')" class="btn btn-outline-primary rounded-pill px-5">
+                Cancel
+            </button>
+            <button (click)="addEducation()" class="btn btn-primary rounded-pill px-5">
+                Submit
+            </button>
+        </div>
+    </div>
+</div>
